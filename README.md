@@ -6,5 +6,9 @@
 * psutil
 * PyQt4
 
+## TODO
+* suport config file
+
 ## Screenshots
 ![image](https://github.com/Mithrilwoodrat/QtConky/blob/master/screenshots/cpumeter.png)
+
