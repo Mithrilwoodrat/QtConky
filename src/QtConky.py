@@ -42,7 +42,12 @@ class Conky(Meter):
         self.contextMenu.show()
 
     def lock_action(self):
-        self.locked = True
+        if self.locked:
+            self.locked = False
+            self.lock_menu.setText('lock')
+        else:
+            self.locked = True
+            self.lock_menu.setText('unlock')
         
     def colse_action(self):
         self.close()
