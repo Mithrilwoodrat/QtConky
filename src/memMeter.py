@@ -9,9 +9,8 @@ from PyQt4 import  QtGui, QtCore
 try:
     import psutil
     def getMemorystate():
-        phymem = psutil.phymem_usage()
-        #used = phymem.total - (phymem.free + psutil.phymem_buffers() + psutil.cached_phymem())
-        return phymem.percent
+        mem_info = psutil.virtual_memory()
+        return mem_info.percent
 except ImportError:
     print "no moudle named psutil"
     
